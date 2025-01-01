@@ -1,0 +1,124 @@
+{
+    "projectPath": "C:/GeneratedProjects_v2/LastTestProject",
+    "solutionName": "TestGeneratedSolution",
+    "projectName": "GeneratedProjectv2",
+    "connectionString": "Server=localhost\\\\SQLEXPRESS;Initial Catalog=TESTDB;Trusted_Connection=True;Encrypt=False",
+    "tables": [
+        {
+            "tableName": "Product",
+            "columns": [
+                {
+                    "name": "Id",
+                    "type": "long",
+                    "isPrimaryKey": true
+                },
+                {
+                    "name": "Name",
+                    "type": "string",
+                    "isPrimaryKey": false
+                },
+                {
+                    "name": "Price",
+                    "type": "decimal",
+                    "isPrimaryKey": false
+                },
+                {
+                    "name": "Stok",
+                    "type": "long",
+                    "isPrimaryKey": false
+                },
+                {
+                    "name": "InsertDate",
+                    "type": "DateTime",
+                    "isPrimaryKey": false
+                },
+                {
+                    "name": "Status",
+                    "type": "char",
+                    "isPrimaryKey": false
+                }
+            ]
+        },
+        {
+            "tableName": "Category",
+            "columns": [
+                {
+                    "name": "Id",
+                    "type": "int",
+                    "isPrimaryKey": true
+                },
+                {
+                    "name": "CategoryName",
+                    "type": "string",
+                    "isPrimaryKey": false
+                },
+                {
+                    "name": "CategoryName2",
+                    "type": "string",
+                    "isPrimaryKey": false
+                },
+                {
+                    "name": "CategoryName3",
+                    "type": "string",
+                    "isPrimaryKey": false
+                },
+                {
+                    "name": "CategoryName4",
+                    "type": "char",
+                    "isPrimaryKey": false
+                },
+                {
+                    "name": "CategoryName5",
+                    "type": "double",
+                    "isPrimaryKey": false
+                },
+                {
+                    "name": "CategoryName6",
+                    "type": "decimal",
+                    "isPrimaryKey": false
+                },
+                {
+                    "name": "CategoryName7",
+                    "type": "DateTime",
+                    "isPrimaryKey": false
+                },
+                {
+                    "name": "CategoryName8",
+                    "type": "long",
+                    "isPrimaryKey": false
+                },
+                {
+                    "name": "CategoryName9",
+                    "type": "int",
+                    "isPrimaryKey": false
+                },
+                {
+                    "name": "CategoryName0",
+                    "type": "string",
+                    "isPrimaryKey": false
+                },
+                {
+                    "name": "CategoryName11",
+                    "type": "string",
+                    "isPrimaryKey": false
+                },
+                {
+                    "name": "CategoryName12",
+                    "type": "string",
+                    "isPrimaryKey": false
+                },
+                {
+                    "name": "CategoryName13",
+                    "type": "string",
+                    "isPrimaryKey": false
+                },
+                {
+                    "name": "CategoryName14",
+                    "type": "string",
+                    "isPrimaryKey": false
+                }
+            ]
+        }
+    ]
+}
+
