@@ -18,7 +18,7 @@ namespace GeneratedProjectsAPI.CommonHandler.OperationHandlers
         {
             var dbContextCode = $@"
 using Microsoft.EntityFrameworkCore;
-using {projectName}.Repository.Entities;
+using {projectName}.Model;
 
 
 namespace {projectName}.Repository

@@ -60,7 +60,7 @@ namespace {projectName}.Service.Base
         private void CreateServiceClass(string projectPath, Table table, string projectName)
         {
             var serviceCode = $@"
-using {projectName}.Repository.Entities;
+using {projectName}.Model;
 using {projectName}.Repository.{table.TableName}_Repository;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.Extensions.Logging;
@@ -171,7 +171,7 @@ namespace {projectName}.Service.{table.TableName}_Service
     }}
 }}";
 
-            string serviceInterfaceCode = $@"using {projectName}.Repository.Entities;
+            string serviceInterfaceCode = $@"using {projectName}.Model;
 using {projectName}.Service.Base;
 
 namespace {projectName}.Service.{table.TableName}_Service

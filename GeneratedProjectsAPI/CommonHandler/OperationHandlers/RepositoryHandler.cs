@@ -185,7 +185,7 @@ namespace {projectName}.Repository.Base
         private void CreateRepositoryClass(string projectPath, Table table, string projectName)
         {
             var repositoryCode = $@"
-using {projectName}.Repository.Entities;
+using {projectName}.Model;
 using {projectName}.Repository.Base;
 using Microsoft.Extensions.Logging;
 
@@ -201,7 +201,7 @@ namespace {projectName}.Repository.{table.TableName}_Repository
 }}";
 
             var repositoryInterfaceCode = $@"using {projectName}.Repository.Base;
-using {projectName}.Repository.Entities;
+using {projectName}.Model;
 
 namespace {projectName}.Repository.{table.TableName}_Repository
 {{

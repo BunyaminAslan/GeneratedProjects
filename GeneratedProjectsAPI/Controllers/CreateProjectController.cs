@@ -35,7 +35,7 @@ namespace GeneratedProjectsAPI.Controllers
         public async Task<IActionResult> GenerateSolution([FromBody] RequestContext request)
         {
             var projectPath = request.ProjectPath;
-            var projReq = new RequestContext { ProjectPath = projectPath, ProjectName = request.ProjectName, SolutionName = request.SolutionName };
+            var projReq = new RequestContext { ProjectPath = projectPath, ProjectName = request.ProjectName, SolutionName = request.SolutionName };           
             if (string.IsNullOrEmpty(projectPath) || request.Tables == null || !request.Tables.Any())
             {
                 return BadRequest(new { message = "Geçerli bir proje yolu ve tablo bilgileri belirtilmelidir." });
@@ -64,11 +64,18 @@ namespace GeneratedProjectsAPI.Controllers
                 createSolutionHandler.Handle(request);
 
 
-                return await Task.FromResult(Ok(new { message = "Solution basarili oluşturuldu." }));
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("Solution succesfully created. Enjoy!");
+                Console.ForegroundColor = ConsoleColor.White;
+
+                return await Task.FromResult(Ok(new { message = "Solution succesfully created." }));
             }
             catch (Exception ex)
             {
                 await DeleteFolder(projReq);
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Get Error ! " + ex.Message);
+                Console.ForegroundColor = ConsoleColor.White;
 
                 return await Task.FromResult(StatusCode(500, new { message = "Repository sınıfları oluşturulurken bir hata oluştu.", error = ex.Message }));
             }

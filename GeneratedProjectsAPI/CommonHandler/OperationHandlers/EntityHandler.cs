@@ -17,7 +17,7 @@ namespace GeneratedProjectsAPI.CommonHandler.OperationHandlers
 
         private void CreateEntityClasses(string projectPath, IEnumerable<Table> tables, string projectName)
         {
-            var modelsFolderPath = Path.Combine(projectPath, $"{projectName}.Repository", "Entities");
+            var modelsFolderPath = Path.Combine(projectPath, $"{projectName}.Model");
 
             if (!Directory.Exists(modelsFolderPath))
             {
@@ -29,7 +29,7 @@ namespace GeneratedProjectsAPI.CommonHandler.OperationHandlers
                 var entityCode = $@"
 using System.ComponentModel.DataAnnotations;
 
-namespace {projectName}.Repository.Entities
+namespace {projectName}.Model
 {{
     public class {table.TableName}
     {{
