@@ -23,6 +23,16 @@
     {
         public string Name { get; set; }
         public string Type { get; set; }
-        public bool IsPrimaryKey { get; set; }
+        public bool IsPrimaryKey { get; set; } = false;
+        public bool IsForeignKey { get; set; } = false;
+        public string ForeignKeyTableName { get; set; }
+        public int? Releation { get; set; } = null;
+
     }
+    public enum ReleationType
+    {
+        OneToOne,
+        OneToMany,
+        ManyToMany
+    };
 }
